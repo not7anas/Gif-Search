@@ -9,6 +9,8 @@ var inputSearch=document.getElementById("searchZone");
 inputSearch.addEventListener("keyup",function(e){
     var value =inputSearch.value;
     if(e.which===13){
+        var gifContainer = document.querySelector(".gifs-container");
+    gifContainer.innerHTML ="";
         apiRequeste(value);
 
     }
@@ -16,7 +18,8 @@ inputSearch.addEventListener("keyup",function(e){
 
 
 function getValue() {
-
+    var gifContainer = document.querySelector(".gifs-container");
+    gifContainer.innerHTML ="";
     var value = document.getElementById("searchZone").value;
     apiRequeste(value);
     
