@@ -42,7 +42,7 @@ function apiRequeste(value){
     ajaxCall.send();
     ajaxCall.addEventListener("load",function(e){
         
-        var data =e.explicitOriginalTarget.response;
+        var data =ajaxCall.response;
         // parsedata
  
         var response =JSON.parse(data);
